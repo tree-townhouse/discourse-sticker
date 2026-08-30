@@ -1,3 +1,7 @@
 ko:
   site_settings:
     discourse_sticker_enabled: "discourse-sticker 플러그인을 활성화합니다"
+    discourse_sticker_upload_allowed_groups: "스티커 팩을 업로드할 수 있는 그룹 및 신뢰 등급"
+    discourse_sticker_use_allowed_groups: "스티커를 글과 댓글에 사용할 수 있는 그룹 및 신뢰 등급"
+    discourse_sticker_upload_approval_required_groups: "스티커 팩 업로드 시 관리자 또는 운영자의 승인이 필요한 그룹"
+    discourse_sticker_upload_approval_required_below_trust_level: "이 신뢰 등급 미만 사용자의 스티커 팩 업로드는 승인이 필요합니다"

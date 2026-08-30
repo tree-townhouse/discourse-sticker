@@ -2,3 +2,31 @@ plugins:
   discourse_sticker_enabled:
     default: false
     client: true
+  discourse_sticker_upload_allowed_groups:
+    type: group_list
+    list_type: compact
+    default: "10"
+    mandatory_values: "1|2"
+    disallowed_groups: "0|4|5"
+    allow_any: false
+    refresh: true
+  discourse_sticker_use_allowed_groups:
+    type: group_list
+    list_type: compact
+    default: "10"
+    mandatory_values: "1|2"
+    disallowed_groups: "0|4|5"
+    allow_any: false
+    refresh: true
+  discourse_sticker_upload_approval_required_groups:
+    type: group_list
+    list_type: compact
+    default: ""
+    disallowed_groups: "0|1|2|3|4|5"
+    allow_any: false
+    refresh: true
+  discourse_sticker_upload_approval_required_below_trust_level:
+    default: 0
+    type: integer
+    min: 0
+    max: 4

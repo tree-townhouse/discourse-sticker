@@ -13,5 +13,8 @@ module ::DiscourseSticker
 end
 
 require_relative "lib/discourse_sticker/engine"
+require_relative "lib/discourse_sticker/guardian_extension"
 
 Discourse::Application.routes.append { mount ::DiscourseSticker::Engine, at: "/sticker" }
+
+after_initialize { Guardian.prepend(DiscourseSticker::GuardianExtension) }

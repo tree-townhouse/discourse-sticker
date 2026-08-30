@@ -11,17 +11,19 @@ The plugin is being developed incrementally against the latest Discourse release
 - `GET /sticker/site.json` bootstrap endpoint
 - Group and trust-level permission settings for sticker use and upload
 - Guardian policies for use, upload, and upload approval requirements
-- Request and Guardian coverage for enabled, disabled, anonymous, member, group, and staff states
+- Sticker pack, immutable revision, and sticker persistence models
+- Published revision immutability and per-pack revision versioning
+- Discourse `UploadReference` tracking for sticker and cover assets
+- Model coverage for identity, revision integrity, immutability, and uploads
 - GitHub Actions integration with the official Discourse plugin workflow
 
 ## Planned milestones
 
-1. Sticker pack and immutable revision models
-2. Sticker upload and creator workflow
-3. Store and saved packs
-4. Approval and flag reviewables
-5. Composer picker and sticker rendering
-6. Responsive Foundation theme polish
+1. Sticker upload and creator workflow
+2. Store and saved packs
+3. Approval and flag reviewables
+4. Composer picker and sticker rendering
+5. Responsive Foundation theme polish
 
 ## Development
 

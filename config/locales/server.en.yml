@@ -1,3 +1,7 @@
 en:
   site_settings:
     discourse_sticker_enabled: "Enable the discourse-sticker plugin"
+    discourse_sticker_upload_allowed_groups: "Groups and trust levels allowed to upload sticker packs"
+    discourse_sticker_use_allowed_groups: "Groups and trust levels allowed to use stickers in topics and replies"
+    discourse_sticker_upload_approval_required_groups: "Groups whose sticker pack uploads require staff approval"
+    discourse_sticker_upload_approval_required_below_trust_level: "Sticker pack uploads below this trust level require staff approval"

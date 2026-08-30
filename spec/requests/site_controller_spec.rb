@@ -12,6 +12,22 @@ RSpec.describe "DiscourseSticker site endpoint" do
         expect(response.parsed_body).to eq(
           "enabled" => true,
           "plugin_name" => DiscourseSticker::PLUGIN_NAME,
+          "can_use_stickers" => false,
+          "can_upload_stickers" => false,
+          "upload_requires_approval" => false,
+        )
+      end
+
+      it "returns the current user's sticker permissions" do
+        user = Fabricate(:user, refresh_auto_groups: true)
+        sign_in(user)
+
+        get "/sticker/site.json"
+
+        expect(response.parsed_body).to include(
+          "can_use_stickers" => true,
+          "can_upload_stickers" => true,
+          "upload_requires_approval" => false,
         )
       end
     end

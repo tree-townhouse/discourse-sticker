@@ -13,7 +13,8 @@ module ::DiscourseSticker
     def sticker_upload_requires_approval?
       return false if !can_upload_stickers? || is_staff?
 
-      user.trust_level < SiteSetting.discourse_sticker_upload_approval_required_below_trust_level ||
+      user.trust_level <
+        SiteSetting.discourse_sticker_upload_approval_required_below_trust_level ||
         user.in_any_groups?(
           DiscourseSticker.group_ids(
             SiteSetting.discourse_sticker_upload_approval_required_groups,

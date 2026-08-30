@@ -51,3 +51,31 @@ module ::DiscourseSticker
     end
   end
 end
+
+# == Schema Information
+#
+# Table name: discourse_sticker_sticker_pack_revisions
+#
+#  id              :bigint           not null, primary key
+#  description     :text
+#  published_at    :datetime
+#  status          :integer          default("draft"), not null
+#  title           :string(120)      not null
+#  version         :integer          not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  cover_upload_id :bigint
+#  created_by_id   :bigint           not null
+#  sticker_pack_id :bigint           not null
+#
+# Indexes
+#
+#  idx_on_cover_upload_id_dbdd32550c         (cover_upload_id)
+#  idx_on_created_by_id_75b8ed35dc           (created_by_id)
+#  idx_on_sticker_pack_id_status_cc46e844db  (sticker_pack_id,status)
+#  idx_sticker_pack_revisions_pack_version   (sticker_pack_id,version) UNIQUE
+#
+# Foreign Keys
+#
+#  fk_rails_...  (sticker_pack_id => discourse_sticker_sticker_packs.id)
+#

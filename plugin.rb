@@ -14,8 +14,4 @@ end
 
 require_relative "lib/discourse_sticker/engine"
 
-after_initialize do
-  Discourse::Application.routes.append do
-    mount ::DiscourseSticker::Engine, at: "/sticker"
-  end
-end
+Discourse::Application.routes.append { mount ::DiscourseSticker::Engine, at: "/sticker" }

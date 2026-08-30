@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe DiscourseSticker::Sticker do
-  fab!(:owner) { Fabricate(:user) }
+  fab!(:owner, :user)
   fab!(:upload)
-  fab!(:other_upload) { Fabricate(:upload) }
+  fab!(:other_upload, :upload)
 
   let(:pack) { DiscourseSticker::StickerPack.create!(owner: owner, slug: "sample-pack") }
   let(:draft_revision) do

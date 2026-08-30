@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe DiscourseSticker::StickerPack do
-  fab!(:owner) { Fabricate(:user) }
+  fab!(:owner, :user)
 
   it "normalizes and validates slugs" do
     pack = described_class.create!(owner: owner, slug: " My-Pack ")

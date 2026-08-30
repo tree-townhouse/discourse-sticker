@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe DiscourseSticker::StickerPackRevision do
-  fab!(:owner) { Fabricate(:user) }
+  fab!(:owner, :user)
 
   let(:pack) { DiscourseSticker::StickerPack.create!(owner: owner, slug: "sample-pack") }
 

@@ -11,11 +11,20 @@ module ::DiscourseSticker
 
     validates :name,
               presence: true,
-              length: { maximum: 80 },
-              uniqueness: { scope: :sticker_pack_revision_id }
+              length: {
+                maximum: 80,
+              },
+              uniqueness: {
+                scope: :sticker_pack_revision_id,
+              }
     validates :position,
-              numericality: { only_integer: true, greater_than_or_equal_to: 0 },
-              uniqueness: { scope: :sticker_pack_revision_id }
+              numericality: {
+                only_integer: true,
+                greater_than_or_equal_to: 0,
+              },
+              uniqueness: {
+                scope: :sticker_pack_revision_id,
+              }
     validate :revision_is_editable, on: :create
 
     before_update :prevent_changes_to_published_revision

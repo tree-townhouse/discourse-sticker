@@ -16,8 +16,13 @@ module ::DiscourseSticker
 
     validates :title, presence: true, length: { maximum: 120 }
     validates :version,
-              numericality: { only_integer: true, greater_than: 0 },
-              uniqueness: { scope: :sticker_pack_id }
+              numericality: {
+                only_integer: true,
+                greater_than: 0,
+              },
+              uniqueness: {
+                scope: :sticker_pack_id,
+              }
     validates :published_at, presence: true, if: :published?
 
     before_update :prevent_published_revision_changes

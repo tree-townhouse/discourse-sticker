@@ -14,8 +14,12 @@ module ::DiscourseSticker
     validates :slug,
               presence: true,
               uniqueness: true,
-              length: { maximum: 80 },
-              format: { with: /\A[a-z0-9]+(?:-[a-z0-9]+)*\z/ }
+              length: {
+                maximum: 80,
+              },
+              format: {
+                with: /\A[a-z0-9]+(?:-[a-z0-9]+)*\z/,
+              }
     validate :current_revision_belongs_to_pack
     validate :current_revision_is_published
 
